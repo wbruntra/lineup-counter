@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 var div = $('<div id="float-count">\
 <h3>Counter</h3>\
 <p>5: <span id="f5" class="number-display"></span></p>\
@@ -13,7 +12,9 @@ $('body').append(div);
 
 function makeCount() {
   var counts = {};
+  var totalChoices =  $('img.confidence-circles').length/(5*2*2);
   var nums = ['1','2','3','4','5'];
+  var targetNumber = totalChoices/nums.length;
   for (var i=0;i<nums.length;i++) {
     counts[nums[i]] = 0;
   }
@@ -44,10 +45,10 @@ function makeCount() {
       info = info + '&bull;'
     }
     $span.html(info);
-    if (used < 3) {
+    if (used < targetNumber) {
       $span.addClass('low');
     }
-    else if (used > 3) {
+    else if (used > targetNumber) {
       $span.addClass('high');
     }
     else {
