@@ -11,6 +11,7 @@
 
 #float-count h3 {
   text-decoration: underline;
+  margin: 19px 15px;
 }
 
 #float-count.docked {
@@ -27,4 +28,16 @@
 #float-count .number-display {
   font-weight: bold;
   padding-left: 5px;
+}
+
+#float-count .number-display.perfect {
+  color: green;
+}
+
+#float-count .number-display.high {
+  color: red;
+}
+
+#float-count .number-display.low {
+  color: blue;
 }

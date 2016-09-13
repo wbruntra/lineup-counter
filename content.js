@@ -37,13 +37,27 @@ function makeCount() {
   for (var i=0;i<nums.length;i++) {
     var num = nums[i];
     var $span = $('#f'+num);
-    var info = counts[num];
+    var used = counts[num]
+    var info = "";
+    $span.removeClass('low high perfect');
+    for (var j=0; j<used; j++) {
+      info = info + '&bull;'
+    }
     $span.html(info);
+    if (used < 3) {
+      $span.addClass('low');
+    }
+    else if (used > 3) {
+      $span.addClass('high');
+    }
+    else {
+      $span.addClass('perfect');
+    }
   }
 }
 
 $(document).on('click','img.confidence-circles',function() {
-  t = setTimeout(makeCount, 250);
+  t = setTimeout(makeCount, 175);
 });
 
 $('#float-count').click(function() {
