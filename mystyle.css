@@ -1,0 +1,30 @@
+#float-count {
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+  background-color: #ffe0a3;
+  padding: 0 10px;
+  -webkit-box-shadow: 10px 6px 5px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 6px 5px -4px rgba(0,0,0,0.75);
+  box-shadow: 10px 6px 5px -4px rgba(0,0,0,0.75);
+}
+
+#float-count h3 {
+  text-decoration: underline;
+}
+
+#float-count.docked {
+  padding:3px;
+  bottom: 0px;
+  right: 5px;
+  background-color: #0177c0;
+}
+
+#float-count.docked p {
+  display: none;
+}
+
+#float-count .number-display {
+  font-weight: bold;
+  padding-left: 5px;
+}
